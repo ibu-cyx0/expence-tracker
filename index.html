@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Smart Expense Diary</h1>
+
+    <form id="user-form">
+      <input type="text" id="user-name" placeholder="Enter your name" required>
+      <input type="number" id="monthly-budget" placeholder="Set your monthly budget (₹)" required>
+      <button type="submit">Start Tracking</button>
+    </form>
+
+    <div id="expense-section" style="display:none;">
+      <p>👋 Hello, <strong id="display-name"></strong></p>
+      <p>🎯 Monthly Budget: ₹<span id="budget-amount">0</span></p>
+      <p>💸 Remaining: ₹<span id="remaining-amount">0</span></p>
+
+      <form id="expense-form">
+        <input type="text" id="desc" placeholder="Expense Description" required>
+        <input type="number" id="amount" placeholder="Amount (₹)" required>
+        <button type="submit" id="submit-btn">➕ Add Expense</button>
+      </form>
+
+      <ul id="expense-list"></ul>
+      <h2>Total Spent: ₹<span id="total">0</span></h2>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
